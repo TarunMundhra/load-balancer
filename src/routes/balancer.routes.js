@@ -65,7 +65,7 @@ router.post("/simulate", (req, res) => {
 
 // GET /dashboard — visual HTML metrics page
 router.get("/dashboard", (req, res) => {
-  const m = metricsService.getMetrics();
+  const m = metrics.getMetrics();
   const h = healthCheck.getHealthMap();
   const total = m.totalRequests || 1; // avoid divide by zero
 
