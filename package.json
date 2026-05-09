@@ -1,0 +1,19 @@
+{
+  "name": "load-balancer",
+  "version": "1.0.0",
+  "description": "Production-quality Load Balancer with Consistent Hashing, Health Checks, Weighted Routing, Rate Limiting, and Metrics.",
+  "main": "src/app.js",
+  "scripts": {
+    "start": "node src/app.js",
+    "dev": "nodemon src/app.js",
+    "simulate": "node simulation/trafficSimulator.js"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.4"
+  },
+  "license": "MIT"
+}
