@@ -10,7 +10,7 @@ const HEALTH_CHECK_INTERVAL_MS = 10000;
 const RATE_LIMIT_MAX = 5;
 const RATE_LIMIT_WINDOW_MS = 60000;
 const VIRTUAL_NODES = 100;
-const RING_SIZE = 360;
+const RING_SIZE = 3600;
 const HEALTH_DOWN_PROBABILITY = 0.1;
 
 module.exports = {

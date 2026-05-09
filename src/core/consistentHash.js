@@ -11,9 +11,11 @@ let sortedPositions = [];
  * @returns {number} Ring position in [0, RING_SIZE).
  */
 function hash(key) {
-  let sum = 0;
-  for (let i = 0; i < key.length; i++) sum += key.charCodeAt(i);
-  return sum % RING_SIZE;
+  let h = 0;
+  for (let i = 0; i < key.length; i++) {
+    h = (h * 31 + key.charCodeAt(i)) % RING_SIZE;
+  }
+  return h;
 }
 
 /**
@@ -37,8 +39,8 @@ function addNode(nodeName) {
   }
   rebuildSorted();
   // Add at the bottom of your addNode() function
-console.log(`[Ring] Total virtual slots: ${this.ring.length}`);
-console.log(`[Ring] Nodes on ring: ${[...new Set(this.ring.map(s => s.node))]}`);
+  console.log(`[Ring] Total virtual slots: ${ring.size}`);
+  console.log(`[Ring] Nodes on ring: ${[...new Set([...ring.values()])].join(", ")}`);
 }
 
 /**
